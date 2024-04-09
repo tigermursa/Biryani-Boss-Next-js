@@ -17,7 +17,7 @@
 /* Banner css here */
 .banner {
   background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
-    url("/public/2745402.jpg");
+    url("/banner-bg.jpg");
   background-position: center;
   background-size: cover;
   display: flex;
