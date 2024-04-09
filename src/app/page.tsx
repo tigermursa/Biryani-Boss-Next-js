@@ -1,9 +1,13 @@
+"use client"
 import MainPage from "@/Components/ui/MainPage/MainPage";
+import { NextUIProvider } from "@nextui-org/react";
 
 const HomePage = () => {
   return (
     <div>
-      <MainPage />
+      <NextUIProvider>
+        <MainPage />
+      </NextUIProvider>
     </div>
   );
 };

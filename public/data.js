@@ -129,7 +129,7 @@ const data = [
     id: "015",
     name: "Chui Ghoshto Special",
     price: 280,
-    category: "chui-ghoshto",
+    category: "chui",
     quantity: "3 persons",
     imageUrl:
       "https://images.deliveryhero.io/image/fd-bd/Products/6170422.jpg?width=%s",
@@ -138,7 +138,7 @@ const data = [
     id: "016",
     name: "Spicy Chui Ghoshto",
     price: 300,
-    category: "chui-ghoshto",
+    category: "chui",
     quantity: "5 persons",
     imageUrl:
       "https://images.deliveryhero.io/image/fd-bd/Products/6170422.jpg?width=%s",
@@ -147,7 +147,7 @@ const data = [
     id: "017",
     name: "Chui Ghoshto Delight",
     price: 250,
-    category: "chui-ghoshto",
+    category: "chui",
     quantity: "1 person",
     imageUrl:
       "https://images.deliveryhero.io/image/fd-bd/Products/6170422.jpg?width=%s",
