@@ -46,6 +46,11 @@ const Menu = () => {
                   </p>
                 </div>
               </div>
+              <div>
+                <span className="absolute top-0 right-0 bg-black text-white border border-gray-400 px-2 py-1 rounded-tr-lg rounded-bl-lg">
+                  {"12%"} off
+                </span>
+              </div>
             </div>
           ))}
       </div>
@@ -54,21 +59,3 @@ const Menu = () => {
 };
 
 export default Menu;
-
-/*
-
-data:[
-  {
-    _id:00011223
-    image:"hosted on image bb"
-    name:"Special Rice"
-    description:"about the dish and the history"
-    origin:"Pakistan"
-    rating:"5star"
-    stock::"112"
-    discount:"12%"
-  }
-]
-
-
-*/
