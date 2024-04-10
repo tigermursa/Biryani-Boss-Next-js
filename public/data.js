@@ -8,42 +8,7 @@ const data = [
     imageUrl:
       "https://img.freepik.com/free-photo/gourmet-chicken-biryani-with-steamed-basmati-rice-generated-by-ai_188544-13480.jpg",
   },
-  {
-    id: "002",
-    name: "Special Polished Rice",
-    price: 190,
-    category: "popular",
-    quantity: "5 persons",
-    imageUrl:
-      "https://img.freepik.com/free-photo/gourmet-chicken-biryani-with-steamed-basmati-rice-generated-by-ai_188544-13480.jpg",
-  },
-  {
-    id: "003",
-    name: "Special Polished Rice",
-    price: 190,
-    category: "popular",
-    quantity: "1 person",
-    imageUrl:
-      "https://img.freepik.com/free-photo/gourmet-chicken-biryani-with-steamed-basmati-rice-generated-by-ai_188544-13480.jpg",
-  },
-  {
-    id: "004",
-    name: "Special Polished Rice",
-    price: 190,
-    category: "popular",
-    quantity: "3 persons",
-    imageUrl:
-      "https://img.freepik.com/free-photo/gourmet-chicken-biryani-with-steamed-basmati-rice-generated-by-ai_188544-13480.jpg",
-  },
-  {
-    id: "005",
-    name: "Special Polished Rice",
-    price: 190,
-    category: "popular",
-    quantity: "5 persons",
-    imageUrl:
-      "https://img.freepik.com/free-photo/gourmet-chicken-biryani-with-steamed-basmati-rice-generated-by-ai_188544-13480.jpg",
-  },
+
   {
     id: "006",
     name: "Special Kacchi Biryani",

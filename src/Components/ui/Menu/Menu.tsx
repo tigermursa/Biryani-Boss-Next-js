@@ -1,46 +1,25 @@
 "use client";
-import { SetStateAction, useState } from "react";
+import { useState } from "react";
 import data from "../../../../public/data";
 import Image from "next/image";
+import Category from "./Category";
 
 const Menu = () => {
   const [selectedCategory, setSelectedCategory] = useState("popular");
 
-  const handleCategoryClick = (category: SetStateAction<string>) => {
-    setSelectedCategory(category);
-  };
-
   return (
-    <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 border border-red-700">
+    <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 ">
       <h1 className="text-5xl item-card-font mb-20 text-center mt-10">
         Our <span className="text-primary">Special</span> Menu
       </h1>
 
-      <div className="mb-10 flex justify-center">
-        <ul className="grid grid-cols-3 sm:grid-cols-4 md:grid-cols-3 lg:grid-cols-6 gap-4 ">
-          {[
-            "popular",
-            "kacchi",
-            "polaw",
-            "chui",
-            "drinks",
-            "others",
-          ].map((category) => (
-            <li key={category}>
-              <button
-                className={`w-[100px] border border-red-600 p-3 text-xl font-semibold rounded-3xl ${
-                  selectedCategory === category && "bg-red-600 text-white"
-                }`}
-                onClick={() => handleCategoryClick(category)}
-              >
-                {category}
-              </button>
-            </li>
-          ))}
-        </ul>
-      </div>
+      <Category
+        selectedCategory={selectedCategory}
+        setSelectedCategory={setSelectedCategory}
+      />
+
       {/* cards */}
-      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8 ">
+      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-3 xl:grid-cols-4 gap-8 ">
         {data
           .filter((item) => item.category === selectedCategory)
           .map((item) => (
@@ -75,3 +54,21 @@ const Menu = () => {
 };
 
 export default Menu;
+
+/*
+
+data:[
+  {
+    _id:00011223
+    image:"hosted on image bb"
+    name:"Special Rice"
+    description:"about the dish and the history"
+    origin:"Pakistan"
+    rating:"5star"
+    stock::"112"
+    discount:"12%"
+  }
+]
+
+
+*/
