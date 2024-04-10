@@ -3,10 +3,12 @@ import { useState } from "react";
 import data from "../../../../public/data";
 import Image from "next/image";
 import Category from "./Category";
+import ItemModal from "../Modals/ItemModal";
+import { useDisclosure } from "@nextui-org/react";
 
 const Menu = () => {
   const [selectedCategory, setSelectedCategory] = useState("popular");
-
+  const { isOpen, onOpen, onOpenChange } = useDisclosure();
   return (
     <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 ">
       <h1 className="text-5xl item-card-font mb-20 text-center mt-10">
@@ -51,6 +53,7 @@ const Menu = () => {
                   {"12%"} off
                 </span>
               </div>
+              <ItemModal isOpen={isOpen} onOpen={onOpen} onOpenChange={onOpenChange} />
             </div>
           ))}
       </div>
