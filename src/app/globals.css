@@ -1,20 +1,18 @@
+/*
+====================
+Tailwind CSS files 
+======================
+*/
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
-.bg-primary {
-  background-color: red;
-}
-
-.text-primary {
-  color: red;
-}
-
-.text-secondary {
-  color: white;
-}
-
-/* Banner css here */
+/*
+==========================
+Banner's background image  
+==========================
+*/
 .banner {
   background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
     url("/banner-bg.jpg");
@@ -26,6 +24,12 @@
   height: 500px;
 }
 
+/*
+========================
+Banner's Text Font
+========================
+*/
+
 .banner-font {
   font-family: "EB Garamond", serif;
   font-optical-sizing: auto;
@@ -33,11 +37,14 @@
   font-style: normal; */
 }
 
-/* Item card font */
+/*
+========================
+Food Item's Text Font
+========================
+*/
+
 .item-card-font {
   font-family: "Lusitana", serif;
   font-weight: 700;
   font-style: normal;
 }
-
-

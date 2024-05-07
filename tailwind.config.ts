@@ -9,15 +9,45 @@ const config: Config = {
     "./node_modules/@nextui-org/theme/dist/**/*.{js,ts,jsx,tsx}",
   ],
   theme: {
+    container: {
+      padding: {
+        DEFAULT: '15px',
+      },
+    },
+    screens: {
+      sm: '640px',
+      md: '768px',
+      lg: '960px',
+      xl: '1280px',
+    },
     extend: {
+      // fontFamily: {
+      //   bangers: [`var(--font-bangers)`, 'sans-serif'],
+      //   quicksand: [`var(--font-quicksand)`, 'sans-serif'],
+      //   robotoCondensed: [`var(--font-robotoCondensed)`, 'sans-serif'],
+      // },
+      colors: {
+        primary: '#ff0000', 
+        primaryLight:"#ef1012",
+        secondary: '#ffa323',
+        tertiary: '#331812',
+        black: '#231714',
+        orange: '#FF7A30',
+      },
       backgroundImage: {
-        "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",
-        "gradient-conic":
-          "conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))",
+        pattern: "url('/pattern.png')",
+      },
+      backgroundSize: {
+        'size-200': '200% 200%',
+      },
+      backgroundPosition: {
+        'pos-0': '0% 0%',
+        'pos-100': '100% 100%',
       },
     },
   },
   darkMode: "class",
+  
   plugins: [nextui()],
 };
 export default config;
