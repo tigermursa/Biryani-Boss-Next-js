@@ -53,7 +53,7 @@ const Menu = () => {
                   {"12%"} off
                 </span>
               </div>
-              <ItemModal isOpen={isOpen} onOpen={onOpen} onOpenChange={onOpenChange} />
+              {/* <ItemModal isOpen={isOpen} onOpen={onOpen} onOpenChange={onOpenChange} /> */}
             </div>
           ))}
       </div>

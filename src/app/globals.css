@@ -14,23 +14,23 @@ Banner's background image
 ==========================
 */
 .banner {
-  background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
+  background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),
     url("/banner-bg.jpg");
   background-position: center;
-  background-size: cover;
+  background-size: contain;
+  background-repeat: inherit;
   display: flex;
   align-items: center;
   justify-content: center;
-  height: 500px;
 }
 
 /*
 ========================
-Banner's Text Font
+Primary Text Font
 ========================
 */
 
-.banner-font {
+.primary-font {
   font-family: "EB Garamond", serif;
   font-optical-sizing: auto;
   /* font-weight: <weight>;
