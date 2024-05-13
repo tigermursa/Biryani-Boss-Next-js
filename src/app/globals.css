@@ -1,28 +1,6 @@
-/*
-====================
-Tailwind CSS files 
-======================
-*/
-
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-
-/*
-==========================
-Banner's background image  
-==========================
-*/
-.banner {
-  background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),
-    url("/banner-bg.jpg");
-  background-position: center;
-  background-size: contain;
-  background-repeat: inherit;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
 
 /*
 ========================
@@ -34,14 +12,14 @@ Primary Text Font
   font-family: "EB Garamond", serif;
   font-optical-sizing: auto;
   /* font-weight: <weight>;
-  font-style: normal; */
+    font-style: normal; */
 }
 
 /*
-========================
-Food Item's Text Font
-========================
-*/
+  ========================
+  Food Item's Text Font
+  ========================
+  */
 
 .item-card-font {
   font-family: "Lusitana", serif;

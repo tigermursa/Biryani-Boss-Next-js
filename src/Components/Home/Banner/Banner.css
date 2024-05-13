@@ -1,0 +1,15 @@
+/*
+==========================
+Banner's background image  
+==========================
+*/
+.banner {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),
+    url("/backgrounds/banner-bg.jpg");
+  background-position: center;
+  background-size: contain;
+  background-repeat: inherit;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
