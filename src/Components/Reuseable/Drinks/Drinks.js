@@ -32,14 +32,14 @@ const Drinks = ({ drinks, additionalDrinks, setAdditionalDrinks }) => {
       } w-full max-w-[110px] h-[140px] p-1 flex flex-col items-center justify-center border rounded-md bg-yellow-100 shadow-md  relative`}
     >
       <Image
-        src={topping.image}
+        src={drinks.image}
         alt=""
         width={70}
         height={70}
         className="mb-2"
       />
       <div className="text-sm capitalize text-center  font-medium">
-        {topping.name}
+        {drinks.name}
       </div>
       <input
         className="absolute w-full h-full opacity-0 cursor-pointer"

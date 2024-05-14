@@ -1,9 +1,10 @@
 import Image from "next/image";
-import { useEffect, useState } from "react";
+import { useContext, useEffect, useState } from "react";
 import SizeSelection from "../Reuseable/SizeSelection/SizeSelection";
 import Drinks from "../Reuseable/Drinks/Drinks";
+import { CartContext } from "@/context/CartContext";
 
-const BiryaniDetails = ({ product, modal }) => {
+const BiryaniDetails = ({ product,setModal }) => {
   const [size, setSize] = useState("small");
   const [additionalDrinks, setAdditionalDrinks] = useState([]);
   const [additionalDrinksPrice, setAdditionalDrinksPrice] = useState(0);

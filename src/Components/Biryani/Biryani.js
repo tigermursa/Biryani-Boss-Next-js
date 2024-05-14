@@ -2,8 +2,17 @@
 import { IoCloseOutline } from "react-icons/io5";
 import { useState } from "react";
 import Image from "next/image";
-import Modal from "react-modal";
+import Modal from 'react-modal';
 import BiryaniDetails from "./BiryaniDetails";
+// Modal
+Modal.setAppElement("body");
+//style
+const modalStyles = {
+  overlay: {
+    backgroundColor: "rgba(0,0,0,0.5)",
+  },
+};
+
 const Biryani = ({ product }) => {
   //Modal State
   const [modal, setModal] = useState(false);
