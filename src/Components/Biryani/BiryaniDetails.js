@@ -4,7 +4,7 @@ import SizeSelection from "../Reuseable/SizeSelection/SizeSelection";
 import Drinks from "../Reuseable/Drinks/Drinks";
 import { CartContext } from "@/context/CartContext";
 
-const BiryaniDetails = ({ product,setModal }) => {
+const BiryaniDetails = ({ product, setModal }) => {
   const [size, setSize] = useState("small");
   const [additionalDrinks, setAdditionalDrinks] = useState([]);
   const [additionalDrinksPrice, setAdditionalDrinksPrice] = useState(0);
@@ -43,37 +43,40 @@ const BiryaniDetails = ({ product,setModal }) => {
               src={product.image}
               alt=""
               priority={1}
-              className="mx-auto relative"
+              className="mx-auto relative rounded-lg"
             />
           </div>
         </div>
         <div className=" flex flex-col flex-1">
           <div className="flex-1 p-2 text-center lg:text-left ">
-            <div className="flex-1 bg-yellow-100 bg-opacity-0 overflow-y-scroll h-[46vh]  scrollbar-thin scrollbar-thumb-secondary scrollbar-track-yellow-100 pr-2">
+            <div class="flex-1 bg-yellow-100 bg-opacity-0 overflow-y-scroll h-[46vh] pr-2 scrollbar-red-thin">
+              {/* Product name and size ui */}
               <div className="font-semibold">
                 <h2 className="capitalize text-3xl mb-1">{product.name}</h2>
-                <div className="mb-6 text-lg font-medium">
+                <div className="mb-6 text-lg font-bold ">
                   <span>
                     {size === "small"
-                      ? "25 cm"
+                      ? "1 person"
                       : size === "medium"
-                      ? "30 cm"
+                      ? "3 person"
                       : size === "large"
-                      ? "35 cm"
+                      ? "5 person"
                       : null}
                   </span>
                 </div>
               </div>
+              {/* Size selection by image component */}
               <SizeSelection product={product} size={size} setSize={setSize} />
               <div className="mb-4 text-xl font-semibold">Choose Drinks</div>
+              {/* Chose drinks component */}
               <div className="flex flex-1 flex-wrap gap-2 py-1 justify-center lg:justify-start ">
                 {product.drinks?.map((drinks, index) => {
                   return (
                     <Drinks
+                      key={index}
                       drinks={drinks}
                       additionalDrinks={additionalDrinks}
                       setAdditionalDrinks={setAdditionalDrinks}
-                      key={index}
                     />
                   );
                 })}
