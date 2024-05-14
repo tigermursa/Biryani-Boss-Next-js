@@ -93,7 +93,6 @@ const BiryaniDetails = ({ product, setModal }) => {
                   price,
                   additionalDrinks,
                   size,
-                  crust
                 );
                 setModal(false);
               }}

@@ -7,11 +7,12 @@ const SizeSelection = ({ product, size, setSize }) => {
         {/* small */}
         <label className=" flex flex-col items-center gap-x-2 cursor-pointer">
           <Image
-            className={`border-2 p-[2px] ${size === "small" ? "border-orange" : "border-transparent"} mb-1`}
+            className={`border-2 rounded-lg p-[2px] ${size === "small" ? "border-orange rounded-lg" : "border-transparent"} mb-1`}
             src={product.image}
             alt=""
             width={60}
             height={60}
+            
           />
           <input
             type="radio"
@@ -26,7 +27,7 @@ const SizeSelection = ({ product, size, setSize }) => {
         {/* medium */}
         <label className=" flex flex-col items-center gap-x-2 cursor-pointer">
           <Image
-            className={`border-2 p-[2px] ${size === "medium" ? "border-orange" : "border-transparent"} mb-1`}
+            className={`border-2 rounded-lg p-[2px] ${size === "medium" ? "border-orange rounded-lg " : "border-transparent"} mb-1`}
             src={product.image}
             alt=""
             width={70}
@@ -45,7 +46,7 @@ const SizeSelection = ({ product, size, setSize }) => {
         {/* Large */}
         <label className=" flex flex-col items-center gap-x-2 cursor-pointer">
           <Image
-            className={`border-2 p-[2px] ${size === "large" ? "border-orange" : "border-transparent"} mb-1`}
+            className={`border-2 rounded-lg p-[2px] ${size === "large" ? "border-orange rounded-lg" : "border-transparent"} mb-1`}
             src={product.image}
             alt=""
             width={80}
