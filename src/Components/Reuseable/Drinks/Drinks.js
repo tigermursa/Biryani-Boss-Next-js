@@ -70,7 +70,7 @@ const Drinks = ({ drinks, additionalDrinks, setAdditionalDrinks }) => {
           isChecked ? "opacity-100" : "opacity-0"
         } absolute top-1 right-1 `}
       >
-        <IoMdCheckmark className="text-xl text-orange" />
+        <IoMdCheckmark className="text-xl text-primary" />
       </div>
     </div>
   );

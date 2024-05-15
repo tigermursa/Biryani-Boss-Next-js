@@ -47,12 +47,8 @@ const CartBottom = () => {
           </div>
         </div>
       ) : (
-        <div className="absolute top-0 w-full h-full flex flex-col justify-center items-center -z-10">
-          <div className="font-semibold"> Your cart is empty ☹</div>
-
-          <div className="font-semibold text-center text-xs mt-1">
-    Elevate your day with fantastic Biryani! 🥰 Order now for culinary bliss. 🍲✨
-</div>
+        <div className="absolute top-0 w-full h-full flex justify-center items-center -z-10">
+          <div className="font-semibold"> Your cart is empty</div>
         </div>
       )}
       {modal && (

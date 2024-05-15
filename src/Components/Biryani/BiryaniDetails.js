@@ -61,6 +61,7 @@ const BiryaniDetails = ({ product, setModal }) => {
         </div>
         <div className=" flex flex-col flex-1">
           <div className="flex-1 p-2 text-center lg:text-left ">
+            {/* using the overflow scroll for drinks selection */}
             <div class="flex-1 bg-yellow-100 bg-opacity-0 overflow-y-scroll h-[46vh] pr-2 scrollbar-red-thin">
               {/* Product name and size ui */}
               <div className="font-semibold">
@@ -87,7 +88,7 @@ const BiryaniDetails = ({ product, setModal }) => {
                     <Drinks
                       key={index}
                       drinks={drinks}
-                      //sending the selected drinks
+                      //sending the selected
                       additionalDrinks={additionalDrinks}
                       setAdditionalDrinks={setAdditionalDrinks}
                     />
@@ -96,7 +97,7 @@ const BiryaniDetails = ({ product, setModal }) => {
               </div>
             </div>
           </div>
-          <div className="h-full flex items-center px-2 lg:items-end">
+          <div className="h-full flex items-center px-2 lg:items-end ">
             <button
               onClick={() => {
                 addToCart(

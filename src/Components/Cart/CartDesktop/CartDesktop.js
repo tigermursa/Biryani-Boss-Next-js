@@ -8,7 +8,6 @@ import CartItem from "../CartItem/CartItem";
 
 const CartDesktop = () => {
   const { cart, isOpen } = useContext(CartContext);
-  //!cart console
   console.log(cart);
   return (
     <div
