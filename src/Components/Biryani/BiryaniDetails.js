@@ -5,12 +5,22 @@ import Drinks from "../Reuseable/Drinks/Drinks";
 import { CartContext } from "@/context/CartContext";
 
 const BiryaniDetails = ({ product, setModal }) => {
+  //for size
   const [size, setSize] = useState("small");
+
+  //for selected drinks which will be a array with drinks data
   const [additionalDrinks, setAdditionalDrinks] = useState([]);
+
+  //for selected drinks price
   const [additionalDrinksPrice, setAdditionalDrinksPrice] = useState(0);
+
+  //the main price state
   const [price, setPrice] = useState(0);
+
+  //the main function of the cart which will contain all the items
   const { addToCart } = useContext(CartContext);
 
+  //for size selection
   useEffect(() => {
     size === "small"
       ? setPrice(parseFloat(product.priceSm + additionalDrinksPrice).toFixed(2))
@@ -21,12 +31,14 @@ const BiryaniDetails = ({ product, setModal }) => {
       : null;
   });
 
+  // for drinks selection
   useEffect(() => {
     if (additionalDrinks.length > 0) {
-      const toppingPrice = additionalDrinks.reduce((a, c) => {
+      const drinksPrice = additionalDrinks.reduce((a, c) => {
         return a + c.price;
       }, 0);
-      setAdditionalDrinksPrice(toppingPrice);
+      //!the data is setting here to additionalDrinksPrice
+      setAdditionalDrinksPrice(drinksPrice);
     } else {
       setAdditionalDrinksPrice(0);
     }
@@ -75,6 +87,7 @@ const BiryaniDetails = ({ product, setModal }) => {
                     <Drinks
                       key={index}
                       drinks={drinks}
+                      //sending the selected drinks
                       additionalDrinks={additionalDrinks}
                       setAdditionalDrinks={setAdditionalDrinks}
                     />
@@ -92,7 +105,7 @@ const BiryaniDetails = ({ product, setModal }) => {
                   product.name,
                   price,
                   additionalDrinks,
-                  size,
+                  size
                 );
                 setModal(false);
               }}

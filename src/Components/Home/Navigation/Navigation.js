@@ -1,4 +1,4 @@
-import MyContainer from "@/Components/Containers/MyContainer";
+
 import Image from "next/image";
 // Icons
 import {
@@ -36,7 +36,7 @@ const Navigation = () => {
             <li>Order</li>
             <li>About Us</li>
           </ul>
-          <button className=" bg-primary text-white p-2 rounded-xl primary-font font-semibold ">
+          <button className="  btn btn-primary btn-sm gradient primary-font  ">
             Order Now!
           </button>
         </div>

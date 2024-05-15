@@ -7,8 +7,8 @@ export const CartContext = createContext();
 const CartProvider = ({ children }) => {
   const [isOpen, setIsOpen] = useState(false);
   const [cart, setCart] = useState([]);
-  const [cartTotal, setCartTotal] = useState(0);
-  const [itemAmount, setItemAmount] = useState(0);
+  const [cartTotal, setCartTotal] = useState(0); //total price of the items that users have selected
+  const [itemAmount, setItemAmount] = useState(0); //how many items user selected
 
   useEffect(() => {
     const amount = cart.reduce((a, c) => {
@@ -26,15 +26,7 @@ const CartProvider = ({ children }) => {
   }, [cart]);
 
   // add to cart
-  const addToCart = (
-    id,
-    image,
-    name,
-    price,
-    additionalDrinks,
-    size,
-    crust
-  ) => {
+  const addToCart = (id, image, name, price, additionalDrinks, size,) => {
     additionalDrinks.sort((a, b) => a.name.localeCompare(b.name));
 
     const newItems = {
@@ -44,7 +36,6 @@ const CartProvider = ({ children }) => {
       price,
       additionalDrinks,
       size,
-      crust,
       amount: 1,
     };
 
@@ -54,8 +45,7 @@ const CartProvider = ({ children }) => {
         item.price === price &&
         item.size === size &&
         JSON.stringify(item.additionalDrinks) ===
-          JSON.stringify(additionalDrinks) &&
-        item.crust === crust
+          JSON.stringify(additionalDrinks)
     );
 
     if (cartItemIndex === -1) {
@@ -72,9 +62,9 @@ const CartProvider = ({ children }) => {
   };
 
   //remove items
-  const removeItem = (id, price, crust) => {
+  const removeItem = (id, price) => {
     const itemIndex = cart.findIndex(
-      (item) => item.id === id && item.price === price && item.crust === crust
+      (item) => item.id === id && item.price === price
     );
     if (itemIndex !== -1) {
       const newCart = [...cart];
@@ -118,14 +108,14 @@ const CartProvider = ({ children }) => {
   return (
     <CartContext.Provider
       value={{
-        isOpen,
         setIsOpen,
         addToCart,
-        cart,
         setCart,
         removeItem,
         increaseAmount,
         decreaseAmount,
+        isOpen,
+        cart,
         itemAmount,
         cartTotal,
       }}

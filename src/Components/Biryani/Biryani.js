@@ -84,9 +84,9 @@ const Biryani = ({ product }) => {
             >
               <IoCloseOutline className="text-4xl text-primary" />
             </div>
+            {/* Inside the modal component is BiryaniDetails */}
             <BiryaniDetails
               product={product}
-              modal={modal}
               setModal={setModal}
             />
           </Modal>
