@@ -6,8 +6,8 @@ import { CartContext } from "@/context/CartContext";
 
 const BiryaniDetails = ({ product, setModal }) => {
   //for size
-  const [size, setSize] = useState("small");
-
+  const [size, setSize] = useState("small");  
+  
   //for selected drinks which will be a array with drinks data
   const [additionalDrinks, setAdditionalDrinks] = useState([]);
 
@@ -19,6 +19,9 @@ const BiryaniDetails = ({ product, setModal }) => {
 
   //the main function of the cart which will contain all the items
   const { addToCart } = useContext(CartContext);
+
+//for my testing own state 
+const [alex,setAlex] = useState("NICE")
 
   //for size selection
   useEffect(() => {
@@ -62,7 +65,7 @@ const BiryaniDetails = ({ product, setModal }) => {
         <div className=" flex flex-col flex-1">
           <div className="flex-1 p-2 text-center lg:text-left ">
             {/* using the overflow scroll for drinks selection */}
-            <div class="flex-1 bg-yellow-100 bg-opacity-0 overflow-y-scroll h-[46vh] pr-2 scrollbar-red-thin">
+            <div className="flex-1 bg-yellow-100 bg-opacity-0 overflow-y-scroll h-[46vh] pr-2 scrollbar-red-thin">
               {/* Product name and size ui */}
               <div className="font-semibold">
                 <h2 className="capitalize text-3xl mb-1">{product.name}</h2>
@@ -106,7 +109,8 @@ const BiryaniDetails = ({ product, setModal }) => {
                   product.name,
                   price,
                   additionalDrinks,
-                  size
+                  size,
+                  alex,
                 );
                 setModal(false);
               }}

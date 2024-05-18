@@ -4,14 +4,20 @@ import { useContext } from "react";
 import { BiMinus, BiPlus } from "react-icons/bi";
 import { IoCloseOutline } from "react-icons/io5";
 
-const CartItem = ({ product}) => {
+const CartItem = ({ product }) => {
   const { removeItem, increaseAmount, decreaseAmount } =
     useContext(CartContext);
   return (
     <div className=" select-none">
       <div className="flex gap-x-4 mb-2">
         <div className="flex justify-center items-center">
-          <Image width={90} height={90} alt="lol" src={product.image} />
+          <Image
+            width={90}
+            height={90}
+            alt="lol"
+            src={product.image}
+            className="w-auto h-auto"
+          />
         </div>
         <div className="flex-1 flex flex-col gap-y-1">
           <div className="text-lg capitalize font-bold">{product.name}</div>

@@ -9,6 +9,8 @@ const CartProvider = ({ children }) => {
   const [cart, setCart] = useState([]);
   const [cartTotal, setCartTotal] = useState(0); //total price of the items that users have selected
   const [itemAmount, setItemAmount] = useState(0); //how many items user selected
+  //for my testing own state 
+const [alex,setAlex] = useState("NICE")
 
   useEffect(() => {
     const amount = cart.reduce((a, c) => {
@@ -34,6 +36,7 @@ const CartProvider = ({ children }) => {
       image,
       name,
       price,
+      alex,
       additionalDrinks,
       size,
       amount: 1,
@@ -118,6 +121,7 @@ const CartProvider = ({ children }) => {
         cart,
         itemAmount,
         cartTotal,
+        alex,
       }}
     >
       {children}

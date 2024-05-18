@@ -29,7 +29,7 @@ const Biryani = ({ product }) => {
       <div className="group py-2 px-4 xl:py-4 xl:px-2 rounded-xl border-2 shadow-lg shadow-black border-red-700 flex flex-col justify-center items-center">
         <Image
           onClick={openModal}
-          className="lg:group-hover:translate-y-3 transition-all duration-300 mb-8 cursor-pointer rounded-xl object-cover"
+          className="lg:group-hover:translate-y-3 transition-all duration-300 mb-8 cursor-pointer rounded-xl object-cover w-auto h-auto"
           width={270}
           height={270}
           src={product.image}
@@ -85,10 +85,7 @@ const Biryani = ({ product }) => {
               <IoCloseOutline className="text-4xl text-primary" />
             </div>
             {/* Inside the modal component is BiryaniDetails */}
-            <BiryaniDetails
-              product={product}
-              setModal={setModal}
-            />
+            <BiryaniDetails product={product} setModal={setModal} />
           </Modal>
         )}
       </div>
