@@ -130,7 +130,7 @@ export const data = [
     name: "Egg Khichuri",
     description:
       "Fluffy rice, lentils, and boiled eggs seasoned with aromatic spices.",
-    image: "/products/chicken-biryani.webp",
+    image: "/products/egg-khichuri.webp",
     priceSm: 100,
     priceMd: 280,
     priceLg: 460,

@@ -26,17 +26,16 @@ const Biryani = ({ product }) => {
   };
   return (
     <>
-      
       <div className="group py-2 px-4 xl:py-4 xl:px-2 rounded-xl  shadow-sm shadow-black  flex flex-col justify-center items-center">
         <Image
           onClick={openModal}
-          className="lg:group-hover:translate-y-3 transition-all duration-300 mb-8 cursor-pointer rounded-xl object-cover w-auto h-auto"
+          className="lg:group-hover:translate-y-3 transition-all duration-300 mb-8 object-cover cursor-pointer rounded-xl w-[21rem] h-[15rem]"
           width={270}
           height={270}
           src={product.image}
           alt=""
           priority={1}
-        ></Image>
+        />
         {/* title */}
         <div onClick={openModal}>
           <div className="text-xl font-bold mb-3 capitalize text-gray-800 cursor-pointer ">
