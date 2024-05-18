@@ -111,6 +111,7 @@ const [alex,setAlex] = useState("NICE")
                   additionalDrinks,
                   size,
                   alex,
+                  setAlex
                 );
                 setModal(false);
               }}

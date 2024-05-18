@@ -63,28 +63,11 @@ Primary Text Font
 }
 
 
-/* @layer base {
-  .btn {
-    @apply rounded-xl font-semibold transition-all;
-  }
-  .btn-sm {
-    @apply py-3 px-6;
-  }
-  .btn-lg {
-    @apply py-4 px-6;
-  }
-  .btn-primary {
-    @apply bg-primary text-white hover:bg-primary/90;
-  }
-  .btn-secondary {
-    @apply bg-secondary text-white hover:bg-secondary/90;
-  }
-
-  .gradient {
-    @apply bg-gradient-to-r to-primary via-orange from-primary bg-size-200 bg-pos-0 hover:bg-pos-100 text-white transition-all duration-500;
-  }
-} */
-/* For WebKit (Safari, Chrome, etc.) */
+/*
+  ========================================
+  Item selection modal's scrollbar design
+  ========================================
+  */
 .scrollbar-red-thin::-webkit-scrollbar {
   width: 2px;
 }
@@ -96,3 +79,9 @@ Primary Text Font
 .scrollbar-red-thin::-webkit-scrollbar-thumb {
   background: linear-gradient(to right, red, orange); 
 }
+
+/*
+  =================
+  Title style
+  =================
+  */

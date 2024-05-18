@@ -1,6 +1,5 @@
 import "./Banner.css";
 const Banner = () => {
-  console.log("I am not client component?");
   return (
     <div>
       <div className="banner primary-font  h-[200px] lg:h-[300px] ">
