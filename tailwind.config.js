@@ -19,12 +19,12 @@ module.exports = {
         primaryLight: "#ef1012",
         secondary: "#ffa323",
         tertiary: "#331812",
-        black: "#231714",
+        // black: "#231714",
         orange: "#FF7A30",
       },
-      backgroundImage: {
-        pattern: "url('/pattern.png')",
-      },
+      // backgroundImage: {
+      //   pattern: "url('/pattern.png')",
+      // },
       backgroundSize: {
         "size-200": "200% 200%",
       },
