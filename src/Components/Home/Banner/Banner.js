@@ -1,4 +1,5 @@
 import "./Banner.css";
+console.log("who am i");
 const Banner = () => {
   return (
     <div>

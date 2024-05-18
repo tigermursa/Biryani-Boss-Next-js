@@ -6,7 +6,7 @@ Modal.setAppElement("body");
 //style
 const modalStyles = {
   overlay: {
-    backgroundColor: "rgba(0,0,0,0.5)",
+    backgroundColor: "rgba(0,0,0,0.1)",
   },
 };
 const SelectItemModal = ({ product, setModal, modal, closeModal }) => {
