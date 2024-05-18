@@ -1,12 +1,10 @@
 "use client";
-
 import { useState } from "react";
-import Biryani from "@/Components/Biryani/Biryani";
-import Banner from "@/Components/Home/Banner/Banner";
-import Title from "@/Components/Reuseable/Title/Title";
+import Title from "../Reuseable/Title/Title";
 import { data } from "@/Database/data";
+import { Biryani } from "next/font/google";
 
-const HomePage = () => {
+const BiryaniMainPage = () => {
   const [selectedCategory, setSelectedCategory] = useState("all");
 
   const filteredData =
@@ -15,8 +13,7 @@ const HomePage = () => {
       : data.filter((product) => product.category === selectedCategory);
 
   return (
-    <section>
-      <Banner />
+    <>
       <Title data={"Our Special Items"} />
 
       {/* Category Buttons */}
@@ -43,8 +40,8 @@ const HomePage = () => {
           ))}
         </div>
       </div>
-    </section>
+    </>
   );
 };
 
-export default HomePage;
+export default BiryaniMainPage;

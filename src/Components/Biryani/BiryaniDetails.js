@@ -118,7 +118,7 @@ const [alex,setAlex] = useState("NICE")
               className="btn btn-lg gradient w-full  flex justify-center  gap-x-2 "
             >
               <div>Add to cart for</div>
-              <div>${price}</div>
+              <div>&#2547;{price}</div>
             </button>
           </div>
         </div>

@@ -2,6 +2,7 @@ export const data = [
   {
     id: 101,
     name: "Chicken Biryani",
+    category: "chicken",
     description:
       "Succulent chicken and aromatic spices layered with fragrant basmati rice.",
     image: "/products/chicken-briyani-hq.webp",
@@ -44,6 +45,7 @@ export const data = [
   {
     id: 102,
     name: "Beef Biryani",
+    category: "beef",
     description:
       "Tender beef and exotic spices harmonize with fragrant basmati rice.",
     image: "/products/beef-biryani.webp",
@@ -86,6 +88,7 @@ export const data = [
   {
     id: 103,
     name: "Kacchi Biryani (Bashmoti)",
+    category: "mutton",
     description:
       "Tender mutton and aromatic spices marry fragrant basmati rice",
     image: "/products/kacchi-biryani.webp",
@@ -128,6 +131,7 @@ export const data = [
   {
     id: 104,
     name: "Egg Khichuri",
+    category: "chicken",
     description:
       "Fluffy rice, lentils, and boiled eggs seasoned with aromatic spices.",
     image: "/products/egg-khichuri.webp",
@@ -170,6 +174,7 @@ export const data = [
   {
     id: 105,
     name: "Beef Khichuri",
+    category: "beef",
     description:
       "Fluffy rice, lentils, and boiled eggs seasoned with aromatic spices.",
     image: "/products/beef-Khichuri.webp",
@@ -211,7 +216,8 @@ export const data = [
   },
   {
     id: 106,
-    name: "Beef Tehari",
+    name: "Beef Tehari (Turkish)",
+    category: "beef",
     description:
       "Fluffy rice, lentils, and boiled eggs seasoned with aromatic spices.",
     image: "/products/beef-tehari.webp",
@@ -254,6 +260,7 @@ export const data = [
   {
     id: 107,
     name: "Chicken Khichuri",
+    category: "chicken",
     description:
       "Fluffy rice, lentils, and boiled eggs seasoned with aromatic spices.",
     image: "/products/chicken-khichuri.webp",
@@ -296,6 +303,7 @@ export const data = [
   {
     id: 108,
     name: "Mutton Khichuri",
+    category: "mutton",
     description:
       "Fluffy rice, lentils, and boiled eggs seasoned with aromatic spices.",
     image: "/products/mutton-khichuri.webp",
@@ -338,6 +346,7 @@ export const data = [
   {
     id: 109,
     name: "Special Chicken Curry",
+    category: "chicken",
     description:
       "Fluffy rice, lentils, and boiled eggs seasoned with aromatic spices.",
     image: "/products/chicken.webp",
@@ -380,6 +389,7 @@ export const data = [
   {
     id: 110,
     name: "Special Roasted Chicken",
+    category: "chicken",
     description:
       "Fluffy rice, lentils, and boiled eggs seasoned with aromatic spices.",
     image: "/products/spatchcocked-roasted-chicken.webp",
@@ -422,6 +432,7 @@ export const data = [
   {
     id: 111,
     name: "White Rice Chicken Vegetable",
+    category: "chicken",
     description:
       "Fluffy rice, lentils, and boiled eggs seasoned with aromatic spices.",
     image: "/products/white rice with chinken and vagies.webp",
@@ -464,6 +475,7 @@ export const data = [
   {
     id: 112,
     name: "White Rice",
+    category: "rice",
     description:
       "Fluffy rice, lentils, and boiled eggs seasoned with aromatic spices.",
     image: "/products/white rice.webp",
