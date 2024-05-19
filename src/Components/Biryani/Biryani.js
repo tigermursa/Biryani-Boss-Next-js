@@ -5,7 +5,7 @@ import SelectItemModal from "../Reuseable/Modals/SelectItemsModal/SelectItemModa
 import { data } from "@/Database/data";
 
 const Biryani = () => {
-  //item selection
+  // Item selection
   const [selectedCategory, setSelectedCategory] = useState("all");
   const filteredData =
     selectedCategory === "all"
@@ -14,15 +14,18 @@ const Biryani = () => {
 
   // Modal State
   const [modal, setModal] = useState(false);
+  const [selectedProduct, setSelectedProduct] = useState(null);
 
   // Open Modal
-  const openModal = () => {
+  const openModal = (product) => {
+    setSelectedProduct(product);
     setModal(true);
   };
 
   // Close Modal
   const closeModal = () => {
     setModal(false);
+    setSelectedProduct(null);
   };
 
   return (
@@ -51,7 +54,7 @@ const Biryani = () => {
             className="group py-2 px-4 xl:py-4 xl:px-2 rounded-xl shadow-md border flex flex-col justify-center items-center"
           >
             <Image
-              onClick={openModal}
+              onClick={() => openModal(product)}
               className="lg:group-hover:translate-y-3 transition-all duration-300 mb-8 object-cover cursor-pointer rounded-xl w-[21rem] h-[15rem]"
               width={270}
               height={270}
@@ -60,7 +63,7 @@ const Biryani = () => {
               priority={1}
             />
             {/* Title */}
-            <div onClick={openModal}>
+            <div onClick={() => openModal(product)}>
               <div className="text-xl font-bold mb-3 capitalize text-gray-800 cursor-pointer ">
                 {product.name}
               </div>
@@ -76,14 +79,14 @@ const Biryani = () => {
                 <span className="font-extrabold">&#2547;</span>
               </div>
               <button
-                onClick={openModal}
+                onClick={() => openModal(product)}
                 className="hidden lg:flex gradient rounded-lg btn-sm font-semibold text-sm"
               >
                 Choose
               </button>
               {/* Button for phone */}
               <button
-                onClick={openModal}
+                onClick={() => openModal(product)}
                 className="btn btn-sm gradient text-sm lg:hidden px-3"
               >
                 Start at {product.priceSm}
@@ -91,9 +94,9 @@ const Biryani = () => {
               </button>
             </div>
             {/* Modal */}
-            {modal && (
+            {modal && selectedProduct && (
               <SelectItemModal
-                product={product}
+                product={selectedProduct}
                 setModal={setModal}
                 closeModal={closeModal}
                 modal={modal}

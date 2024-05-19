@@ -6,8 +6,8 @@ import { CartContext } from "@/context/CartContext";
 
 const BiryaniDetails = ({ product, setModal }) => {
   //for size
-  const [size, setSize] = useState("small");  
-  
+  const [size, setSize] = useState("small");
+
   //for selected drinks which will be a array with drinks data
   const [additionalDrinks, setAdditionalDrinks] = useState([]);
 
@@ -20,8 +20,8 @@ const BiryaniDetails = ({ product, setModal }) => {
   //the main function of the cart which will contain all the items
   const { addToCart } = useContext(CartContext);
 
-//for my testing own state 
-const [alex,setAlex] = useState("NICE")
+  //for my testing own state
+  const [alex, setAlex] = useState("NICE");
 
   //for size selection
   useEffect(() => {
