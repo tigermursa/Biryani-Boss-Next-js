@@ -33,7 +33,7 @@ const Footer = () => {
               <FaSquareXTwitter />
             </div>
           </div>
-          <div className="flex flex-col lg:flex-row items-start lg:items-center justify-center text-white text-sm">
+          <div className="flex flex-col lg:flex-row items-start lg:items-center justify-center text-white text-sm cursor-pointer">
             <div className="mb-4 lg:mb-0 lg:mr-12 text-lg font-semibold">
               <div className="flex items-center gap-2">
                 <TbWorld />
@@ -137,7 +137,7 @@ const Footer = () => {
             <FaCopyright /> <p>Copyright 2024 Biryani Boss</p>
           </div>
           <div className="flex items-center gap-2">
-            <FaPhoneFlip /> <p> +8801456845564</p>
+            <FaPhoneFlip /> <p>Hotline: 1655</p>
           </div>
           <div className="hidden md:block">
             <div className="flex items-center gap-2">
