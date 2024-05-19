@@ -9,8 +9,7 @@ const CartProvider = ({ children }) => {
   const [cart, setCart] = useState([]);
   const [cartTotal, setCartTotal] = useState(0); //total price of the items that users have selected
   const [itemAmount, setItemAmount] = useState(0); //how many items user selected
-  //for my testing own state 
-const [alex,setAlex] = useState("NICE")
+  //for my testing own state
 
   useEffect(() => {
     const amount = cart.reduce((a, c) => {
@@ -28,7 +27,7 @@ const [alex,setAlex] = useState("NICE")
   }, [cart]);
 
   // add to cart
-  const addToCart = (id, image, name, price, additionalDrinks, size,) => {
+  const addToCart = (id, image, name, price, additionalDrinks, size) => {
     additionalDrinks.sort((a, b) => a.name.localeCompare(b.name));
 
     const newItems = {
@@ -36,7 +35,6 @@ const [alex,setAlex] = useState("NICE")
       image,
       name,
       price,
-      alex,
       additionalDrinks,
       size,
       amount: 1,
@@ -121,7 +119,6 @@ const [alex,setAlex] = useState("NICE")
         cart,
         itemAmount,
         cartTotal,
-        alex,
       }}
     >
       {children}

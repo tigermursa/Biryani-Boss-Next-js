@@ -1,5 +1,7 @@
 import Image from "next/image";
 import React from "react";
+import { FaFacebookSquare, FaInstagram, FaWhatsapp } from "react-icons/fa";
+import { FaSquareXTwitter } from "react-icons/fa6";
 
 const Footer = () => {
   return (
@@ -12,10 +14,16 @@ const Footer = () => {
         backgroundRepeat: "no-repeat",
       }}
     >
-      <div className="container mx-auto px-4 py-8 sm:px-6 lg:px-8 bg-black rounded-t-2xl">
+      <div className="container mx-auto px-4 py-8 sm:px-6 lg:px-8 bg-black bg-opacity-60 rounded-t-2xl">
         <div className="flex flex-col lg:flex-row items-start lg:items-center justify-between">
           <div className="mb-4 lg:mb-0">
             <Image src="/logo/logo.png" alt="Logo" width={150} height={150} />
+            <div className="flex justify-center text-2xl gap-2 text-white cursor-pointer">
+              <FaFacebookSquare />
+              <FaInstagram />
+              <FaWhatsapp />
+              <FaSquareXTwitter/>
+            </div>
           </div>
           <div className="flex flex-col lg:flex-row items-start lg:items-center justify-center text-white text-sm">
             <div className="mb-4 lg:mb-0 lg:mr-12 text-lg font-semibold">
