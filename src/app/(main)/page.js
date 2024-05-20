@@ -3,7 +3,8 @@ import Biryani from "@/Components/Biryani/Biryani";
 //Banner page
 import Banner from "@/Components/Home/Banner/Banner";
 import JoinOurFbGroup from "@/Components/Home/JoinOurFBGroup/JoinOurFbGroup";
-import TestimonialSlider from "@/Components/Home/Testimonial/TestimonialPage";
+import OurDeliveryPartner from "@/Components/Home/OurDeliveryPartner/OurDeliveryPartner";
+import Testimonial from "@/Components/Home/Testimonial/Testimonial";
 
 import Title from "@/Components/Reuseable/Title/Title";
 
@@ -16,8 +17,9 @@ const HomePage = () => {
       <section>
         <Title data={"Our Special Items"} />
         <Biryani />
+        <OurDeliveryPartner />
         <JoinOurFbGroup />
-        <TestimonialSlider />
+        <Testimonial />
       </section>
     </>
   );
