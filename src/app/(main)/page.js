@@ -11,14 +11,20 @@ import Title from "@/Components/Reuseable/Title/Title";
 const HomePage = () => {
   return (
     <>
-      <section>
+      <section className="container mx-auto">
         <Banner />
       </section>
       <section>
         <Title data={"Our Special Items"} />
         <Biryani />
+      </section>
+      <section>
         <OurDeliveryPartner />
+      </section>
+      <section>
         <JoinOurFbGroup />
+      </section>
+      <section className="container mx-auto">
         <Testimonial />
       </section>
     </>
