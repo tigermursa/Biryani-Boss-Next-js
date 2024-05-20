@@ -13,6 +13,13 @@ const OurDeliveryPartner = () => {
   return (
     <>
       <Title data={"Our Delivery Partner"} />
+      <Image
+        src={"/logo/foodpanda.png"}
+        alt="food panda logo"
+        width={1200}
+        height={800}
+        className="flex mx-auto w-[25rem] mt-5"
+      />
       <div className="container flex justify-center items-center mx-auto mt-5">
         <div>
           {/* Left side */}

@@ -84,6 +84,43 @@ const Footer = () => {
                   height={30}
                 />
               </div>
+              <div className="flex gap-0">
+                <Image
+                  src={"/logo/panda head.png"}
+                  alt="food panda logo"
+                  width={1200}
+                  height={800}
+                  className="flex mx-auto w-[2rem] mt-5 rounded-full"
+                />
+                <Image
+                  src={"/logo/pathao.png"}
+                  alt="food panda logo"
+                  width={1200}
+                  height={800}
+                  className="flex mx-auto w-[2rem] mt-5 rounded-full object-cover"
+                />
+                <Image
+                  src={"/logo/ubsereats.png"}
+                  alt="food panda logo"
+                  width={1200}
+                  height={800}
+                  className="flex mx-auto w-[2rem] mt-5 rounded-full object-cover"
+                />
+                <Image
+                  src={"/logo/hungrynaki.jpg"}
+                  alt="food panda logo"
+                  width={1200}
+                  height={800}
+                  className="flex mx-auto w-[2rem] mt-5 rounded-full object-cover"
+                />
+                <Image
+                  src={"/logo/redx.png"}
+                  alt="food panda logo"
+                  width={1200}
+                  height={800}
+                  className="flex mx-auto w-[2rem] mt-5 rounded-full object-cover"
+                />
+              </div>
             </div>
 
             <div className="text-xl font-semibold">
