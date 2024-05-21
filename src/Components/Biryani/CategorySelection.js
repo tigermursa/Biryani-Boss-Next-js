@@ -1,11 +1,11 @@
 const CategorySelection = ({ selectedCategory, setSelectedCategory }) => {
   return (
     <div>
-      <div className="flex justify-center mb-6 mt-6">
+      <div className="flex flex-wrap gap-2 justify-center mb-6 mt-6 ">
         {["all", "beef", "chicken", "mutton", "rice"].map((category) => (
           <button
             key={category}
-            className={`px-4 py-2 mx-2 rounded-3xl font-semibold ${
+            className={`px-4 py-2 mx-2 rounded-3xl font-semibold  ${
               selectedCategory === category
                 ? "border-2 border-red-500"
                 : "border-2 border-red-500 bg-primary text-white gradient"
