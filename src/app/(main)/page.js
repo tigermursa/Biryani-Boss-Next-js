@@ -11,7 +11,7 @@ import Title from "@/Components/Reuseable/Title/Title";
 const HomePage = () => {
   return (
     <>
-      <section className="container mx-auto">
+      <section>
         <Banner />
       </section>
       <section>

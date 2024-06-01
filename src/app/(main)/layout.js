@@ -6,7 +6,7 @@ const MainLayout = ({ children }) => {
     <main>
       <Navigation />
       {children}
-      <section className="container mx-auto">
+      <section>
         <Footer />
       </section>
     </main>
