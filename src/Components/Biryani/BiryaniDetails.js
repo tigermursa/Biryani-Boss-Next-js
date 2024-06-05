@@ -20,19 +20,22 @@ const BiryaniDetails = ({ product, setModal }) => {
   //the main function of the cart which will contain all the items
   const { addToCart } = useContext(CartContext);
 
-  //for my testing own state
-  const [alex, setAlex] = useState("NICE");
-
   //for size selection
   useEffect(() => {
-    size === "small"
-      ? setPrice(parseFloat(product.priceSm + additionalDrinksPrice).toFixed(2))
-      : size === "medium"
-      ? setPrice(parseFloat(product.priceMd + additionalDrinksPrice).toFixed(2))
-      : size === "large"
-      ? setPrice(parseFloat(product.priceLg + additionalDrinksPrice).toFixed(2))
-      : null;
-  });
+    if (size === "small") {
+      setPrice(parseFloat(product.priceSm + additionalDrinksPrice).toFixed(2));
+    } else if (size === "medium") {
+      setPrice(parseFloat(product.priceMd + additionalDrinksPrice).toFixed(2));
+    } else if (size === "large") {
+      setPrice(parseFloat(product.priceLg + additionalDrinksPrice).toFixed(2));
+    }
+  }, [
+    size,
+    product.priceSm,
+    product.priceMd,
+    product.priceLg,
+    additionalDrinksPrice,
+  ]);
 
   // for drinks selection
   useEffect(() => {
@@ -109,9 +112,7 @@ const BiryaniDetails = ({ product, setModal }) => {
                   product.name,
                   price,
                   additionalDrinks,
-                  size,
-                  alex,
-                  setAlex
+                  size
                 );
                 setModal(false);
               }}

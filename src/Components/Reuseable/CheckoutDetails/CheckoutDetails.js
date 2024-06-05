@@ -3,11 +3,11 @@ import Image from "next/image";
 import { CartContext } from "@/context/CartContext";
 
 const CheckoutDetails = ({ setModal }) => {
-  const { cart, setCart, cartTotal } = useContext(CartContext);
+  const { cart, setCart } = useContext(CartContext);
   const [successMsg, setSuccessMsg] = useState(false);
   const [count, setCount] = useState(5);
 
-  //counter
+  // Counter
   useEffect(() => {
     if (successMsg) {
       const timer = setTimeout(() => {
@@ -17,9 +17,9 @@ const CheckoutDetails = ({ setModal }) => {
       }, 1000);
       return () => clearTimeout(timer);
     }
-  });
+  }, [count, successMsg]); // Added dependencies
 
-  //close model after timeOut
+  // Close modal after timeout
   useEffect(() => {
     if (successMsg) {
       const timer = setTimeout(() => {
@@ -29,7 +29,7 @@ const CheckoutDetails = ({ setModal }) => {
       }, 5000);
       return () => clearTimeout(timer);
     }
-  }, [successMsg]);
+  }, [successMsg, setCart, setModal]); // Added dependencies
 
   return (
     <div>
