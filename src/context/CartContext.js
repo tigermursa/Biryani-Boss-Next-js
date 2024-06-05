@@ -16,7 +16,7 @@ const CartProvider = ({ children }) => {
       return a + c.amount;
     }, 0);
     setItemAmount(amount);
-  });
+  }, [cart]); // Added [cart] as a dependency
 
   //update cart total price
   useEffect(() => {
