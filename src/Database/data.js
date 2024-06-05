@@ -177,7 +177,7 @@ export const data = [
     category: "beef",
     description:
       "Fluffy rice, lentils, and boiled eggs seasoned with aromatic spices.",
-    image: "/products/beef-Khichuri.webp",
+    image: "/products/beef-khichuri.webp",
     priceSm: 130,
     priceMd: 360,
     priceLg: 600,
