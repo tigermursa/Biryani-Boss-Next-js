@@ -1,21 +1,20 @@
 "use client";
 import React from "react";
+import axios from "axios";
 
 const GetReq = () => {
   const handleGetRequest = () => {
-    fetch("https://meherun-server.vercel.app/api/v1/auth/example/", {
-      credentials: "include",
-    })
-      .then((response) => {
-        // Set cookies from the response headers
-        const cookies = response.headers.get("set-cookie");
-        if (cookies) {
-          document.cookie = cookies;
-        }
-        return response.json();
+    axios
+      .get("https://bb-server-pro.vercel.app/api/v1/product/get", {
+        withCredentials: true,
       })
-      .then((data) => {
-        console.log(data);
+      .then((response) => {
+        const cookies = response.headers["set-cookie"];
+        if (cookies) {
+          // Set expiration time (adjust as needed)
+          const expires = new Date(Date.now() + 60 * 60 * 1000); // 1 hour from now
+          document.cookie = `${cookies}; expires=${expires.toUTCString()}; path=/`; // Ensure path matches server's cookie path
+        }
       })
       .catch((error) => console.error("Error fetching data:", error));
   };
