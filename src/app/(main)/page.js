@@ -1,5 +1,4 @@
 //Main Biryani page
-import Login from "@/Components/Auth/Login/Login";
 import Biryani from "@/Components/Biryani/Biryani";
 //Banner page
 import Banner from "@/Components/Home/Banner/Banner";
@@ -20,9 +19,6 @@ const HomePage = () => {
       </section>
       <section>
         <OurDeliveryPartner />
-      </section>
-      <section>
-        <Login />
       </section>
       <section>
         <JoinOurFbGroup />
